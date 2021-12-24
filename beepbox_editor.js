@@ -120,7 +120,7 @@ var beepbox = (function (exports) {
 		{ name: "choir", expression: 2.0, isSampled: true, isPercussion: false, extraSampleDetune: -3, samples: centerWave(choirsample) },
 		{ name: "overdriveguitar", expression: 2.0, isSampled: true, isPercussion: false, extraSampleDetune: -6.2, samples: centerWave(overdrivensample) },
 		{ name: "flute", expression: 2.0, isSampled: true, isPercussion: false, extraSampleDetune: -6, samples: centerWave(flutesample) },
-        { name: "test", expression: 1.0, isSampled: true, samples: centerWave(testsample) },
+        { name: "test", expression: 1.0, isSampled: true, idPercussion: false, extraSampleDetune: 0, samples: centerWave(testsample) },
     ]);
 	
     Config.chipNoises = toNameMap([
@@ -550,6 +550,7 @@ var beepbox = (function (exports) {
 				{ name: "Choir Lead", midiProgram: 80, settings: { "type": "chip", "eqFilter": [], "effects": [], "transition": "normal", "fadeInSeconds": 0, "fadeOutTicks": -1, "chord": "arpeggio", "wave": "choir", "unison": "none", "envelopes": [] } },
 				{ name: "Overdrive Guitar", midiProgram: 80, settings: { "type": "chip", "eqFilter": [], "effects": [], "transition": "normal", "fadeInSeconds": 0, "fadeOutTicks": -1, "chord": "arpeggio", "wave": "overdriveguitar", "unison": "none", "envelopes": [] } },
 				{ name: "Flute", midiProgram: 80, settings: { "type": "chip", "eqFilter": [], "effects": [], "transition": "normal", "fadeInSeconds": 0, "fadeOutTicks": -1, "chord": "arpeggio", "wave": "flute", "unison": "none", "envelopes": [] } },
+                { name: "Test", midiProgram: 80, settings: { "type": "chip", "eqFilter": [], "effects": [], "transition": "normal", "fadeInSeconds": 0, "fadeOutTicks": -1, "chord": "arpeggio", "wave": "flute", "unison": "none", "envelopes": [] } },
         ]) },
 		{ name: "Sampled Drums", presets: toNameMap([
 				{ name: "Retro Kick", midiProgram: 80, settings: { "type": "chip", "eqFilter": [], "effects": [], "transition": "normal", "fadeInSeconds": 0, "fadeOutTicks": -1, "chord": "arpeggio", "wave": "kick", "unison": "none", "envelopes": [] } },
